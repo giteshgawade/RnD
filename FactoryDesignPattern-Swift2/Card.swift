@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Define what card is i.e InterfaceProduct
+// Define what card is i.e InterfaceProduct.
 
 protocol Card
 {

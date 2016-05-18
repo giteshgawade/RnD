@@ -1,0 +1,263 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FFCAD30B1CC0CBDD00585ADD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCAD30A1CC0CBDD00585ADD /* main.swift */; };
+		FFCAD3121CC0CBE900585ADD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCAD3111CC0CBE900585ADD /* Card.swift */; settings = {ASSET_TAGS = (); }; };
+		FFCAD3141CC0CD9D00585ADD /* AbstractCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCAD3131CC0CD9D00585ADD /* AbstractCard.swift */; settings = {ASSET_TAGS = (); }; };
+		FFCAD3161CC0D18400585ADD /* CardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCAD3151CC0D18400585ADD /* CardFactory.swift */; settings = {ASSET_TAGS = (); }; };
+		FFCAD3181CC0D2DB00585ADD /* RaidLeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCAD3171CC0D2DB00585ADD /* RaidLeader.swift */; settings = {ASSET_TAGS = (); }; };
+		FFCAD31A1CC0D36200585ADD /* FacelessManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCAD3191CC0D36200585ADD /* FacelessManipulator.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FFCAD3051CC0CBDD00585ADD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FFCAD3071CC0CBDD00585ADD /* FactoryDesignPattern-Swift2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "FactoryDesignPattern-Swift2"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFCAD30A1CC0CBDD00585ADD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FFCAD3111CC0CBE900585ADD /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FFCAD3131CC0CD9D00585ADD /* AbstractCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCard.swift; sourceTree = "<group>"; };
+		FFCAD3151CC0D18400585ADD /* CardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFactory.swift; sourceTree = "<group>"; };
+		FFCAD3171CC0D2DB00585ADD /* RaidLeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaidLeader.swift; sourceTree = "<group>"; };
+		FFCAD3191CC0D36200585ADD /* FacelessManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacelessManipulator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFCAD3041CC0CBDD00585ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FFCAD2FE1CC0CBDD00585ADD = {
+			isa = PBXGroup;
+			children = (
+				FFCAD3091CC0CBDD00585ADD /* FactoryDesignPattern-Swift2 */,
+				FFCAD3081CC0CBDD00585ADD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFCAD3081CC0CBDD00585ADD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFCAD3071CC0CBDD00585ADD /* FactoryDesignPattern-Swift2 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFCAD3091CC0CBDD00585ADD /* FactoryDesignPattern-Swift2 */ = {
+			isa = PBXGroup;
+			children = (
+				FFCAD30A1CC0CBDD00585ADD /* main.swift */,
+				FFCAD3111CC0CBE900585ADD /* Card.swift */,
+				FFCAD3131CC0CD9D00585ADD /* AbstractCard.swift */,
+				FFCAD3151CC0D18400585ADD /* CardFactory.swift */,
+				FFCAD3171CC0D2DB00585ADD /* RaidLeader.swift */,
+				FFCAD3191CC0D36200585ADD /* FacelessManipulator.swift */,
+			);
+			path = "FactoryDesignPattern-Swift2";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFCAD3061CC0CBDD00585ADD /* FactoryDesignPattern-Swift2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFCAD30E1CC0CBDD00585ADD /* Build configuration list for PBXNativeTarget "FactoryDesignPattern-Swift2" */;
+			buildPhases = (
+				FFCAD3031CC0CBDD00585ADD /* Sources */,
+				FFCAD3041CC0CBDD00585ADD /* Frameworks */,
+				FFCAD3051CC0CBDD00585ADD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FactoryDesignPattern-Swift2";
+			productName = "FactoryDesignPattern-Swift2";
+			productReference = FFCAD3071CC0CBDD00585ADD /* FactoryDesignPattern-Swift2 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFCAD2FF1CC0CBDD00585ADD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Gitesh Demos";
+				TargetAttributes = {
+					FFCAD3061CC0CBDD00585ADD = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = FFCAD3021CC0CBDD00585ADD /* Build configuration list for PBXProject "FactoryDesignPattern-Swift2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FFCAD2FE1CC0CBDD00585ADD;
+			productRefGroup = FFCAD3081CC0CBDD00585ADD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFCAD3061CC0CBDD00585ADD /* FactoryDesignPattern-Swift2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFCAD3031CC0CBDD00585ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFCAD31A1CC0D36200585ADD /* FacelessManipulator.swift in Sources */,
+				FFCAD30B1CC0CBDD00585ADD /* main.swift in Sources */,
+				FFCAD3121CC0CBE900585ADD /* Card.swift in Sources */,
+				FFCAD3161CC0D18400585ADD /* CardFactory.swift in Sources */,
+				FFCAD3181CC0D2DB00585ADD /* RaidLeader.swift in Sources */,
+				FFCAD3141CC0CD9D00585ADD /* AbstractCard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FFCAD30C1CC0CBDD00585ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FFCAD30D1CC0CBDD00585ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FFCAD30F1CC0CBDD00585ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FFCAD3101CC0CBDD00585ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFCAD3021CC0CBDD00585ADD /* Build configuration list for PBXProject "FactoryDesignPattern-Swift2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFCAD30C1CC0CBDD00585ADD /* Debug */,
+				FFCAD30D1CC0CBDD00585ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFCAD30E1CC0CBDD00585ADD /* Build configuration list for PBXNativeTarget "FactoryDesignPattern-Swift2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFCAD30F1CC0CBDD00585ADD /* Debug */,
+				FFCAD3101CC0CBDD00585ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFCAD2FF1CC0CBDD00585ADD /* Project object */;
+}

@@ -105,3 +105,70 @@ b] New background context way:
  According to the Core Data concurrency rule, each thread must have its own managed object context. 
  This is because NSManagedObjectContext and NSManagedObject, two most fundamental objects in Core Data, are not thread safe. 
  They shouldn’t be initialized in one thread and accessed from a different thread.
+
+
+Q] What are different ways of creating private context? How to write code for perform some long running task in background?
+a] Closure way :
+        persistentContainer.performBackgroundTask { (context) in
+            
+            let howMany = 999
+            for index in 1...howMany{
+                let person = Person(context: context)
+                person.firstName = "First name \(index)"
+                person.lastName = "First name \(index)"
+            }
+            do{
+                try context.save()
+                DispatchQueue.main.async{completion()}
+            } catch {
+                // catch the errors here
+            }
+        }
+        
+b] new background context way :
+        let context = persistentContainer.newBackgroundContext()
+        context.automaticallyMergesChangesFromParent = true
+        
+        //After this, we will write our Person instances into this new background context and then save it. 
+        //Once that is done, we call the completion handler:
+        
+        context.perform {
+            let howMany = 999
+            for index in 1...howMany{
+                let person = Person(context: context)
+                person.firstName = "First name \(index)"
+                person.lastName = "First name \(index)"
+            }
+            do{
+                try context.save()
+                DispatchQueue.main.async{completion()}
+            } catch {
+                // catch the errors here
+            }
+        }
+        
+Q] What are core data delete rules?
+
+Every relationship has a delete rule. It defines what happens when the record that owns the relationship is deleted.
+
+From Apple:
+
+a] Deny:
+If there is at least one object at the relationship destination (employees), do not delete the source object (department).
+For example, if you want to remove a department, 
+you must ensure that all the employees in that department are first transferred elsewhere. 
+Otherwise, the department cannot be deleted.
+
+b] Nullify:
+Remove the relationship between the objects, but do not delete either object.
+This only makes sense if the department relationship for an employee is optional.
+If you ensure that you set a new department for each of the employees before the next save operation.
+
+c] Cascade:
+Delete the objects at the destination of the relationship when you delete the source.
+For example, if you delete a department, fire all the employees in that department at the same time.
+
+d] No Action:
+Do nothing to the object at the destination of the relationship.
+For example, if you delete a department, leave all the employees as they are. 
+Even if they still believe they belong to that department.

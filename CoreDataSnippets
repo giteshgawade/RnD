@@ -14,3 +14,94 @@ If your application will be processing data, such as importing data into Core Da
 create a private queue context and perform the import on the private context.
 
 let privateMOC = NSManagedObjectContext(concurrencyType: .PrivateQueueConcurrencyType)
+
+
+Q] What are NSManagedObjectContext?
+A] An object representing a single object space or scratch pad that you use to fetch, create, and save managed objects.
+We can access main managed object context as below:
+
+appdelegate.persistentcontainer.viewContext
+
+We can access private managed object context as below:
+
+appdelegate.persistentcontainer.newBackgroundcontext
+
+Q]Creating a managed object context?
+
+1. Creating a main concurrency type context:
+let mainMOC = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+
+2. Creating a private/background type context:
+let privateMOC = NSManagedObjectContext(concurrencyType: .PrivateQueueConcurrencyType)
+
+Accessing main context:
+appdelegate.persistentcontainer.viewContext
+
+Accessing background context:
+a]  let context = appdelegate.persistentcontainer.newBackgroundTask
+    context.automaticallyMergechangesFromParent = true
+    //do long running task
+ 
+b] with closure -
+    appdelegate.persistentcontainer.performBackgroundTask{ (privatecontext)
+    //do long running task
+    }
+    
+Q] How to perform background task in core data?
+A]
+a] The Closure Way - 
+    persistentContainer.performBackgroundTask { (context) in
+            
+            let howMany = 999
+            for index in 1...howMany{
+                let person = Person(context: context)
+                person.firstName = "First name \(index)"
+                person.lastName = "First name \(index)"
+            }
+            do{
+                try context.save()
+                DispatchQueue.main.async{completion()}
+            } catch {
+                // catch the errors here
+            }
+    }
+   
+b] New background context way:
+   let context = persistentContainer.newBackgroundContext()
+   context.automaticallyMergesChangesFromParent = true
+        
+    //After this, we will write our Person instances into this new background context and then save it.
+    //Once that is done, we call the completion handler:
+        
+        context.perform {
+            let howMany = 999
+            for index in 1...howMany {
+                let person = Person(context: context)
+                person.firstName = "First name \(index)"
+                person.lastName = "First name \(index)"
+            }
+            do{
+                try context.save()
+                DispatchQueue.main.async{completion()}
+            } catch {
+                // catch the errors here
+            }
+        }
+        
+ Q] Can we have multiple MOC? Why would we need it?
+ A] Yes, we can have multiple MOC. In scenario where multiple operations are performed simultaneously are performed on Core Data.
+ If we are processing some long task to download JSON and convert to Core Data and simultaneously fetching the data at this scenario,
+ we can use two different MOC for the operations.
+ 
+ Q] Will you ever pass managedObject from one context to another context?
+ A] No, NSManagedObject instances are not intended to be passed between queues. 
+ Doing so can result in corruption of the data and termination of the application. 
+ When it is necessary to hand off a managed object reference from one queue to another,
+ it must be done through NSManagedObjectID instances.
+ You retrieve the managed object ID of a managed object by calling the objectID method on the NSManagedObject instance.
+ 
+ let objectID = managedObject.objectID
+ 
+ According to the Core Data concurrency rule, each thread must have its own managed object context. 
+ This is because NSManagedObjectContext and NSManagedObject, two most fundamental objects in Core Data, are not thread safe. 
+ They shouldn’t be initialized in one thread and accessed from a different thread.
